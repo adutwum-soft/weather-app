@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
 
-Widget TextIcon({required String text, required Icon icon}) {
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    children: <Widget>[
-      Text(text),
-      const SizedBox(
-        width: 5,
-      ),
-      icon,
-    ],
-  );
+class TextIcon extends StatelessWidget {
+  final String text;
+  final Icon icon;
+  const TextIcon({Key? key, required this.text, required this.icon})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        Text(text),
+        const SizedBox(
+          width: 5,
+        ),
+        icon,
+      ],
+    );
+  }
 }

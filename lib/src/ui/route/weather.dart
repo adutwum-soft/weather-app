@@ -35,8 +35,10 @@ class _WeatherState extends State<Weather> {
                 if (snapshot.hasData) {
                   return Column(
                     children: <Widget>[
-                      midView(snapshot),
-                      dayForcast(snapshot, context),
+                      MidView(snapshot: snapshot),
+                      DayForecast(
+                        snapshot: snapshot,
+                      ),
                     ],
                   );
                 } else {
