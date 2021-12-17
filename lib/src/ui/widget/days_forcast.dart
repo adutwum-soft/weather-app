@@ -31,7 +31,7 @@ Widget dayForcast(
             return ClipRRect(
               borderRadius: const BorderRadius.all(Radius.circular(10)),
               child: Container(
-                width: MediaQuery.of(context).size.width / 2.7,
+                width: MediaQuery.of(context).size.width / 2.5,
                 height: 160,
                 child: forcastCard(snapshot, i),
                 decoration: const BoxDecoration(
