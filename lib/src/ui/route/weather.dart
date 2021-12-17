@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather/src/model/weather_forcast.dart';
 import 'package:weather/src/network/network.dart';
+import 'package:weather/src/ui/widget/days_forcast.dart';
 import 'package:weather/src/ui/widget/mid_view.dart';
 
 class Weather extends StatefulWidget {
@@ -35,6 +36,7 @@ class _WeatherState extends State<Weather> {
                   return Column(
                     children: <Widget>[
                       midView(snapshot),
+                      dayForcast(snapshot, context),
                     ],
                   );
                 } else {
